@@ -1,0 +1,30 @@
+{
+  "name": "node-red-contrib-linkinout",
+  "version": "1.0.0",
+  "description": "A very simple node that provides a way to have an input go directly to the output of several other nodes",
+  "main": "",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:haydendonald/node-red-contrib-linkinout.git"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "node-red",
+    "link",
+    "in",
+    "out",
+    "linkinout"
+  ],
+  "node-red": {
+    "nodes": {
+      "Linker": "./nodes/linker.js",
+      "Node": "./nodes/node.js"
+    }
+  },
+  "author": "Hayden Donald",
+  "bugs": {
+    "url": "https://github.com/haydendonald/node-red-contrib-linkinout/issues"
+  },
+  "homepage": "https://github.com/haydendonald/node-red-contrib-linkinout#readme",
+  "dependencies": {}
+}

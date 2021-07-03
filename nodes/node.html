@@ -1,0 +1,39 @@
+
+<!-- Settings Panel -->
+<script type="text/x-red" data-template-name="link-node">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-linker"><i class="icon-bookmark"></i> Link</label>
+        <input type="text" id="node-input-linker">
+    </div>
+</script>
+
+<!-- Register -->
+<script type="text/javascript">
+    RED.nodes.registerType("link-node", {
+        category: "common",
+        color: "#66ccff",
+        defaults: {
+            name: {value: ""},
+            linker: {value: "", type: "linker"},
+        },
+        inputs: 1,
+        outputs: 1,
+        align: "right",
+        icon: "arrow-in.svg",
+        paletteLabel: "Link",
+        label: function() {
+            return this.name||"Link";
+        }
+    });
+</script>
+
+<!-- Information Panel -->
+<script type="text/x-red" data-help-name="link-node">
+    <h1>node-red-contrib-linkinout</h1>
+    <p>This is a very simple node that will output the input to all nodes with the same link</p>
+    <p>This is the link node it provides the link functionality, all nodes with this selected link will output the same messages</p>
+</script>
